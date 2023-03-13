@@ -30,13 +30,10 @@ export const Navigation: React.FC<INavigation> = ({
                     key={entry.id}
                     href={"/" + entry.connection?.slug}
                     passHref
+                    className="font-medium text-blue-500"
+                    aria-current="page"
                   >
-                    <a
-                      className="font-medium text-blue-500"
-                      aria-current="page"
-                    >
-                      {entry?.title}
-                    </a>
+                    {entry?.title}
                   </Link>
                 );
               }
@@ -45,10 +42,9 @@ export const Navigation: React.FC<INavigation> = ({
                   key={entry.id}
                   href={"/" + entry.connection?.slug}
                   passHref
+                  className="font-medium text-gray-600 hover:text-gray-400"
                 >
-                  <a className="font-medium text-gray-600 hover:text-gray-400">
-                    {entry?.title}
-                  </a>
+                  {entry?.title}
                 </Link>
               );
             })}

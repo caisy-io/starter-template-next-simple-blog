@@ -8,9 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       {process.env.PUBLIC_SHOW_ONBOARDING_TOAST != "false" && <Toast />}
-      <Navigation {...pageProps.navigation} />
+      {pageProps.Navigation && <Navigation {...pageProps.Navigation} />}
       <Component {...pageProps} />
-      <Footer {...pageProps.footer} />
+      {pageProps.Footer && <Footer {...pageProps.Footer} />}
     </>
   );
 }

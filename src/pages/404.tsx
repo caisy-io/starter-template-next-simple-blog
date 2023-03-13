@@ -3,21 +3,18 @@ import Head from "next/head";
 import Router from "next/router";
 import { useEffect } from "react";
 import { Page } from "../layouts/Page";
-import { getAllPages } from "../services/content/getAllPages";
 import { EPageType, getProps } from "../services/content/getProps";
 import { IGenPage } from "../services/graphql/__generated/sdk";
 
 interface INextjsPage {
   Page?: IGenPage | null;
-  is404?: boolean;
   redirectHome?: boolean;
 }
 
 const NextjsPage = (props: INextjsPage) => {
   useEffect(() => {
-    if (props?.is404) Router.push("/404");
     if (props?.redirectHome) Router.push("/");
-  }, [props?.is404, props?.redirectHome]);
+  }, [props?.redirectHome]);
 
   return (
     props?.Page && (
@@ -32,27 +29,14 @@ const NextjsPage = (props: INextjsPage) => {
     )
   );
 };
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug as string;
-
-  const resPage = await getProps({ slug, pageType: EPageType.Index });
+export const getStaticProps: GetStaticProps = async () => {
+  const resPage = await getProps({ pageType: EPageType.NotFound });
 
   return {
     revalidate: 60,
     props: {
       ...(resPage || null),
     },
-  };
-};
-
-export const getStaticPaths = async () => {
-  const resAllPages = await getAllPages({});
-
-  return {
-    paths: resAllPages
-      ?.filter((page) => page.slug !== "404")
-      .map((page) => ({ params: { slug: page.slug } })),
-    fallback: true,
   };
 };
 

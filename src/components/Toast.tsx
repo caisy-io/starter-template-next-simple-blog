@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Toast = () => {
   return (
     <div
@@ -8,12 +10,12 @@ export const Toast = () => {
         <p className="text-center w-100">
           Great Job! You have successfully run the caisy template. Click
           on&nbsp;
-          <a
+          <Link
             href="/api/onboarding"
             className="font-semibold underline text-green-400"
           >
             this link
-          </a>
+          </Link>
           &nbsp;to complete the onboarding step. To get rid of this toast, just
           delete it in the code.
         </p>
