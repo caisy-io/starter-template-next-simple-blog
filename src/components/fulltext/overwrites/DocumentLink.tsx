@@ -4,8 +4,8 @@ import { Asset } from "../../Asset";
 
 interface IDocumentLink {
   children?: React.ReactNode;
-  connections?: any;
-  node?: any;
+  connections: any;
+  node: any;
 }
 
 export const DocumentLink: React.FC<IDocumentLink> = ({
@@ -13,8 +13,6 @@ export const DocumentLink: React.FC<IDocumentLink> = ({
   node,
   children,
 }) => {
-  console.log(` connections`, connections);
-  console.log(` node`, node);
   return (
     <>
       {connections?.map(
