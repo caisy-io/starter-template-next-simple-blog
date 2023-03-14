@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "gen": "graphql-codegen -r dotenv/config --config codegen.ts",
+    "gen:watch": "graphql-codegen --watch --config codegen.ts",
     "lint": "next lint"
   },
   "dependencies": {

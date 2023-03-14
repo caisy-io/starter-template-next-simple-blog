@@ -1,38 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Simple blog starter template with Next.js and caisy
 
-## Getting Started
+Deploy this template to Vercel
+<br>
+<br>
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcaisy-io%2Fstarter-template-next-simple-blog&env=CAISY_PROJECT_ID,CAISY_API_KEY&envDescription=CAISY_PROJECT_ID%20and%20CAISY_API_KEY%20is%20required%20for%20the%20tempalte%20to%20work&envLink=https%3A%2F%2Fcaisy.io%2Fdeveloper%2Fdocs%2Fauthentication%2Fapi-keys&project-name=caisy-next-simple-blog&repository-name=caisy-next-simple-blog&demo-title=caisy-next-simple-blog&demo-description=Example%20Deployment%20of%20this%20Template&demo-url=https%3A%2F%2Fcaisy-next-simple-blog.vercel.app)
 
-First, run the development server:
+### Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and OpenGraph data
+- ✅ Dynamic content updates from caisy without redeployment
+- ✅ Sitemap support
+- ✅ Robots.txt support
+
+## Requirements
+
+In order to have the right blueprints configured, make sure to follow the onboarind on [caisy.io](https://caisy.io/) and select the starter template _"Simple Blog"_
+To run this project a `.env.local` file like this (with your own projects values) is required:
+
+```
+CAISY_PROJECT_ID=a894c383-edfc-4499-a639-a40509986ed4
+CAISY_API_KEY=xxx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### To run this project locally
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- [ ] `git clone https://github.com/caisy-io/starter-template-next-simple-blog.git`
+- [ ] create `.env.local` file with your project id and API key - see `.env.sample`
+- [ ] `npm install`
+- [ ] `npm run dev`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+In order to have the right blueprints configured, make sure to follow the onboarind and select the starter template "Simple Blog"
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### We are using
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Next.js as server and server side rendering framework
+- tailwindcss for styling
+- @caisy/rich-text-react-renderer to render the caisy richtexts in react
+- graphql and graphql-request to fetch data from caisy
 
-## Learn More
+#### Codegen
 
-To learn more about Next.js, take a look at the following resources:
+During development we generate code using
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- @graphql-codegen/cli and plugins
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 🧞 Commands
 
-## Deploy on Vercel
+All commands are run from the root of the project, from a terminal:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Command             | Action                                                   |
+| :------------------ | :------------------------------------------------------- |
+| `npm install`       | Installs dependencies                                    |
+| `npm run dev`       | Starts local dev server at `localhost:3000`              |
+| `npm run gen`       | Regenerates generated types and SDK                      |
+| `npm run gen:watch` | Wachting changes and regenerates generated types and SDK |
+| `npm run build`     | Build your production site to `./dist/`                  |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Next.js x Caisy
+
+## 👀 Want to learn more?
+
+Feel free to check [caisy documentation](https://caisy.io/developer/docs)
+Feel free to check [Next.js documentation](https://nextjs.org/docs)
