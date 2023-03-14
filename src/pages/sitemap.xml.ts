@@ -6,9 +6,10 @@ const Sitemap = () => {
   return null;
 };
 
-export const getServerSideProps = async () => {
-  const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}`;
-
+export const getServerSideProps = async ({ req }) => {
+  const baseUrl = `https://${
+    req.headers["host"] || req.headers["x-forwarded-host"]
+  }`;
   const navigationRequest = caisySDK.Navigation();
 
   const [allPages, allBlogArticles] = await Promise.all([

@@ -2,8 +2,10 @@ const Robots = () => {
   return null;
 };
 
-export const getServerSideProps = async ({ res }) => {
-  const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}`;
+export const getServerSideProps = async ({ req, res }) => {
+  const baseUrl = `https://${
+    req.headers["host"] || req.headers["x-forwarded-host"]
+  }`;
 
   const robots = `# *
 User-agent: *
