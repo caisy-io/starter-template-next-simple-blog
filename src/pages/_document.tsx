@@ -13,7 +13,6 @@ export default function Document({ seo }: IDocument) {
     <Html lang="en">
       <Head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
