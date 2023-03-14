@@ -8,12 +8,23 @@ interface IDocumentLink {
   node?: any;
 }
 
-export const DocumentLink: React.FC<IDocumentLink> = ({ ...props }) => {
-  console.log({ propsDOCLINK: props });
+export const DocumentLink: React.FC<IDocumentLink> = ({
+  connections,
+  node,
+  children,
+}) => {
+  console.log(` connections`, connections);
+  console.log(` node`, node);
   return (
     <>
-      {/* {connections == node?.attrs?.documentId && <Asset {...connections} />}
-      {children} */}
+      {connections?.map(
+        (component: IGenAsset) =>
+          component?.__typename == "Asset" &&
+          node?.attrs?.documentId == component.id && (
+            <Asset key={component.id} {...component}></Asset>
+          )
+      )}
+      {children}
     </>
   );
 };
