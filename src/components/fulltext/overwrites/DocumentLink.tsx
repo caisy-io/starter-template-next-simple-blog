@@ -19,7 +19,7 @@ export const DocumentLink: React.FC<IDocumentLink> = ({
         (component: IGenAsset) =>
           component?.__typename == "Asset" &&
           node?.attrs?.documentId == component.id && (
-            <Asset key={component.id} {...component}></Asset>
+            <Asset key={component.id} {...component} />
           )
       )}
       {children}
