@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Head>
         <meta name="viewport" content="width=device-width" />
       </Head>
-      {process.env.PUBLIC_SHOW_ONBOARDING_TOAST != "false" && <Toast />}
+      {process.env.NEXT_PUBLIC_SHOW_ONBOARDING_TOAST != "false" && <Toast />}
       {pageProps.Navigation && <Navigation {...pageProps.Navigation} />}
       <Component {...pageProps} />
       {pageProps.Footer && <Footer {...pageProps.Footer} />}
