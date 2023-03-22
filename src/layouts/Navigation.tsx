@@ -1,16 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import { IGenNavigation } from "../services/graphql/__generated/sdk";
+import { useRouter } from "next/router";
 
-interface INavigation extends IGenNavigation {
-  slug?: string;
-}
+export const Navigation: React.FC<IGenNavigation> = ({ entries, homePage }) => {
+  const { query } = useRouter();
+  const slug = query?.slug;
 
-export const Navigation: React.FC<INavigation> = ({
-  entries,
-  homePage,
-  slug,
-}) => {
   return (
     <header className="flex flex-wrap m-10 z-50 bg-white text-sm">
       <nav className="mx-auto" aria-label="Global">
