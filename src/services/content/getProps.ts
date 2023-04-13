@@ -1,6 +1,5 @@
 import { caisySDK } from "../graphql/getSdk";
 
-
 export enum EPageType {
   Default = 1,
   Blog = 2,
@@ -25,7 +24,6 @@ export const getProps = async ({
   if (slug === undefined && pageType == EPageType.NotFound) {
     const Navigation = (await navigationRequest)?.Navigation;
     slug = Navigation?.notFoundPage?.slug ?? undefined;
-    console.log(`NotFound slug`, slug);
   }
 
   if (slug === undefined) {
@@ -38,17 +36,19 @@ export const getProps = async ({
     };
   }
 
-  const BlogArticle = pageType == EPageType.Blog
-    ? (await caisySDK
-        .allBlogArticleBySlug({ slug })
-        .then((r) => r.allBlogArticle?.edges?.[0]?.node)) ?? null
-    : null;
+  const BlogArticle =
+    pageType == EPageType.Blog
+      ? (await caisySDK
+          .allBlogArticleBySlug({ slug })
+          .then((r) => r.allBlogArticle?.edges?.[0]?.node)) ?? null
+      : null;
 
-  const Page = pageType != EPageType.Blog
-    ? (await caisySDK
-        .allPageBySlug({ slug })
-        .then((r) => r.allPage?.edges?.[0]?.node)) ?? null
-    : null;
+  const Page =
+    pageType != EPageType.Blog
+      ? (await caisySDK
+          .allPageBySlug({ slug })
+          .then((r) => r.allPage?.edges?.[0]?.node)) ?? null
+      : null;
 
   const Navigation = (await navigationRequest)?.Navigation;
 
@@ -56,7 +56,7 @@ export const getProps = async ({
 
   return {
     redirectHome,
-    is404: (BlogArticle === null && Page === null),
+    is404: BlogArticle === null && Page === null,
     Navigation,
     Footer: (await footerRequest)?.Footer,
     BlogArticle,
