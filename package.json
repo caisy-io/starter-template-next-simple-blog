@@ -12,7 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@caisy/rich-text-react-renderer": "^0.7.0",
+    "@caisy/rich-text-react-renderer": "^0.7.3",
     "@fontsource/inter": "^4.5.15",
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",
