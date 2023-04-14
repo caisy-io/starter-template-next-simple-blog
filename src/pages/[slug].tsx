@@ -38,7 +38,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const resPage = await getProps({ slug, pageType: EPageType.Index });
 
   return {
-    revalidate: 60,
+    revalidate: 1,
     props: {
       ...(resPage || null),
     },

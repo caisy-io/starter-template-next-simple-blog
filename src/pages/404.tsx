@@ -33,7 +33,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const resPage = await getProps({ pageType: EPageType.NotFound });
 
   return {
-    revalidate: 60,
+    revalidate: 1,
     props: {
       ...(resPage || null),
     },
