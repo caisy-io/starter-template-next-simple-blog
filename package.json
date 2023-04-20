@@ -15,7 +15,7 @@
     "@caisy/rich-text-react-renderer": "^0.7.3",
     "@fontsource/inter": "^4.5.15",
     "graphql": "^16.6.0",
-    "graphql-request": "^5.2.0",
+    "graphql-request": "^5.1.0",
     "next": "13.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0"
