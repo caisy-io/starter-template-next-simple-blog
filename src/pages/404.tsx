@@ -4,14 +4,8 @@ import Router from "next/router";
 import { useEffect } from "react";
 import { Page } from "../layouts/Page";
 import { EPageType, getProps } from "../services/content/getProps";
-import { IGenPage } from "../services/graphql/__generated/sdk";
 
-interface INextjsPage {
-  Page?: IGenPage | null;
-  redirectHome?: boolean;
-}
-
-const NextjsPage = (props: INextjsPage) => {
+const NextjsPage = (props: Awaited<ReturnType<typeof getProps>>) => {
   useEffect(() => {
     if (props?.redirectHome) Router.push("/");
   }, [props?.redirectHome]);
@@ -29,7 +23,10 @@ const NextjsPage = (props: INextjsPage) => {
     )
   );
 };
-export const getStaticProps: GetStaticProps = async () => {
+
+export const getStaticProps: GetStaticProps<
+  Awaited<ReturnType<typeof getProps>>
+> = async () => {
   const resPage = await getProps({ pageType: EPageType.NotFound });
 
   return {

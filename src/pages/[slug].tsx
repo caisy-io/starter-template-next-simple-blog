@@ -1,19 +1,13 @@
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Router from "next/router";
 import { useEffect } from "react";
 import { Page } from "../layouts/Page";
 import { getAllPages } from "../services/content/getAllPages";
 import { EPageType, getProps } from "../services/content/getProps";
-import { IGenPage } from "../services/graphql/__generated/sdk";
+import { ParsedUrlQuery } from "querystring";
 
-interface INextjsPage {
-  Page?: IGenPage | null;
-  is404?: boolean;
-  redirectHome?: boolean;
-}
-
-const NextjsPage = (props: INextjsPage) => {
+const NextjsPage = (props: Awaited<ReturnType<typeof getProps>>) => {
   useEffect(() => {
     if (props?.is404) Router.push("/404");
     if (props?.redirectHome) Router.push("/");
@@ -32,7 +26,14 @@ const NextjsPage = (props: INextjsPage) => {
     )
   );
 };
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+interface Params extends ParsedUrlQuery {
+  slug?: string;
+}
+
+export const getStaticProps: GetStaticProps<
+  Awaited<ReturnType<typeof getProps>>,
+  Params
+> = async ({ params }) => {
   const slug = params?.slug as string;
 
   const resPage = await getProps({ slug, pageType: EPageType.Index });
@@ -45,13 +46,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
   const resAllPages = await getAllPages({});
 
   return {
     paths: resAllPages
-      ?.filter((page) => page.slug !== "404")
-      .map((page) => ({ params: { slug: page.slug } })),
+      ?.filter((page) => page.slug && page.slug !== "404")
+      .map((page) => ({ params: { slug: page.slug! } })),
     fallback: true,
   };
 };
