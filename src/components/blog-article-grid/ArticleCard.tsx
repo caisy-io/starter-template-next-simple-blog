@@ -8,23 +8,29 @@ export const ArticleCard: React.FC<IGenBlogArticle> = ({
   slug,
 }) => {
   return (
-    <div className="flex flex-col justify-start items-start flex-grow relative overflow-hidden gap-7">
-      {teaserImage?.src && (
-        <div className="self-stretch h-[300px] md:h-[220px] relative overflow-hidden rounded-lg">
-          <img
-            loading="lazy"
-            src={`${teaserImage.src}?w=1024`}
-            srcSet={`${teaserImage.src}?w=1024 1920w, ${teaserImage.src}?w=1024 1280w, ${teaserImage.src}?w=480 640w, ${teaserImage.src}?w=480 320w`}
-            alt={teaserImage.description ?? ""}
-            className="object-cover w-full h-full"
-          />
+    <div className="flex flex-col justify-between items-start flex-grow relative overflow-hidden gap-7 lg:w-3/12 md:w-2/5 sm:w-full">
+      <div>
+        {teaserImage?.src && (
+          <div className="self-stretch h-[300px] md:h-[220px] relative overflow-hidden rounded-lg">
+            <img
+              loading="lazy"
+              src={`${teaserImage.src}?w=1024`}
+              srcSet={`${teaserImage.src}?w=1024 1920w, ${teaserImage.src}?w=1024 1280w, ${teaserImage.src}?w=480 640w, ${teaserImage.src}?w=480 320w`}
+              alt={teaserImage.description ?? ""}
+              className="object-cover object-top  w-full h-full"
+            />
+          </div>
+        )}
+        <div className="flex flex-col justify-start items-start relative gap-3 mt-3">
+          <h2 className="text-xl font-semibold text-left text-gray-600">
+            {teaserHeadline}
+          </h2>
+          <p className="text-base text-left text-gray-600">
+            {teaserDesciption}
+          </p>
         </div>
-      )}
-      <div className="flex flex-col justify-start items-start relative gap-3">
-        <h2 className="text-xl font-semibold text-left text-gray-600">
-          {teaserHeadline}
-        </h2>
-        <p className="text-base text-left text-gray-600">{teaserDesciption}</p>
+      </div>
+      <div>
         <a href={`/blog/${slug}`} className="pointer">
           <div className="flex justify-start items-start">
             <div className="flex justify-center items-center relative overflow-hidden gap-2 rounded-md bg-white">

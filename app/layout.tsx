@@ -12,7 +12,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true}>
+      <body>
         <Navigation {...pageProps?.Navigation} />
         {children}
         <Footer {...pageProps?.Footer} />

@@ -1,3 +1,4 @@
+"use client";
 import { RichTextRenderer } from "@caisy/rich-text-react-renderer";
 import React from "react";
 import { IGenFooter } from "../services/graphql/__generated/sdk";

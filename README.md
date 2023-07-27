@@ -57,6 +57,39 @@ All commands are run from the root of the project, from a terminal:
 | `npm run gen:watch` | Wachting changes and regenerates generated types and SDK |
 | `npm run build`     | Build your production site to `./dist/`                  |
 
+# App Router
+
+- ### The `app` Router
+
+The App Router is a new paradigm for building applications using React's latest features.
+
+In version 13, Next.js introduced a new App Router built on [React Server Components](https://nextjs.org/docs/getting-started/react-essentials#server-components), which supports shared layouts, nested routing, loading states, error handling, and more.
+
+The App Router works in a new directory named `app`. The `app` directory works alongside the `pages` directory to allow for incremental adoption. This allows you to opt some routes of your application into the new behavior while keeping other routes in the `pages` directory for previous behavior. If your application uses the `pages` directory, please also see the [Pages Router](https://nextjs.org/docs/pages/building-your-application/routing) documentation.
+
+- ### Component Hierarchy
+
+The React components defined in special files of a route segment are rendered in a specific hierarchy:
+
+- `layout.js`
+
+- `template.js`
+
+- `error.js` (React error boundary)
+
+- `loading.js` (React suspense boundary)
+
+- `not-found.js` (React error boundary)
+
+- `page.js` or nested layout.js
+
+![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Ffile-conventions-component-hierarchy.png&w=1920&q=75&dpl=dpl_DjpzdahhLTquuaq7vugKKMQTDADC)
+
+In a nested route, the components of a segment will be nested inside the components of its parent segment.
+
+![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fnested-file-conventions-component-hierarchy.png&w=1920&q=75&dpl=dpl_DjpzdahhLTquuaq7vugKKMQTDADC)
+
+See More About [NEXT.JS Using App Router](https://nextjs.org/docs/app)
 ## Next.js x Caisy
 
 ## 👀 Want to learn more?
