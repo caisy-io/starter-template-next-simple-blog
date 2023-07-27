@@ -7,7 +7,7 @@ import { getHeadProps } from "../src/services/content/getHeadProps";
 export async function generateMetadata({ params }) {
   const slug = params?.slug as string;
   const resPage = await getProps({ slug, pageType: EPageType.Index });
-  return getHeadProps(resPage.Page?.seo);
+  return getHeadProps(resPage?.Page?.seo);
 }
 
 export default async function RootLayout({
@@ -27,3 +27,5 @@ export default async function RootLayout({
     </html>
   );
 }
+export const fetchCache = "only-no-store";
+export const revalidate = 0;

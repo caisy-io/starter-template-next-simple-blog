@@ -27,7 +27,9 @@ const requester: Requester<any> = async (doc: any, vars: any) => {
   );
 
   try {
-    const res = await client.rawRequest(print(doc), vars);
+    const res = await client.rawRequest(print(doc), vars, {
+      cache: "no-store",
+    });
     return res?.data as any;
   } catch (err: any) {
     if (NODE_ENV == "development") {

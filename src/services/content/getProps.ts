@@ -42,8 +42,6 @@ export const getProps = async ({
           .allBlogArticleBySlug(
             { slug },
             {
-              fetchPolicy: "no-cache",
-              cache: "no-store",
               next: {
                 revalidate: 5,
               },
@@ -58,8 +56,6 @@ export const getProps = async ({
           .allPageBySlug(
             { slug },
             {
-              fetchPolicy: "no-cache",
-              cache: "no-store",
               next: {
                 revalidate: 5,
               },
