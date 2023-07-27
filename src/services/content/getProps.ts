@@ -39,14 +39,32 @@ export const getProps = async ({
   const BlogArticle =
     pageType == EPageType.Blog
       ? (await caisySDK
-          .allBlogArticleBySlug({ slug })
+          .allBlogArticleBySlug(
+            { slug },
+            {
+              fetchPolicy: "no-cache",
+              cache: "no-store",
+              next: {
+                revalidate: 5,
+              },
+            }
+          )
           .then((r) => r.allBlogArticle?.edges?.[0]?.node)) ?? null
       : null;
 
   const Page =
     pageType != EPageType.Blog
       ? (await caisySDK
-          .allPageBySlug({ slug })
+          .allPageBySlug(
+            { slug },
+            {
+              fetchPolicy: "no-cache",
+              cache: "no-store",
+              next: {
+                revalidate: 5,
+              },
+            }
+          )
           .then((r) => r.allPage?.edges?.[0]?.node)) ?? null
       : null;
 
