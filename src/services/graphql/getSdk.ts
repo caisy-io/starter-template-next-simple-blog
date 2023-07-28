@@ -26,9 +26,10 @@ const requester: Requester<any> = async (doc: any, vars: any) => {
     }
   );
 
+  // Cache-Control: max-age=604800, stale-while-revalidate=86400
   try {
     const res = await client.rawRequest(print(doc), vars, {
-      cache: "no-store",
+      cache: "max-age=604800, stale-while-revalidate=1",
     });
     return res?.data as any;
   } catch (err: any) {

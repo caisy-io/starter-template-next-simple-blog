@@ -1,5 +1,11 @@
 # Simple blog starter template with Next.js and caisy
 
+## 📣 Important Notice: ~~Page Router~~ -> App Router
+
+**This repository** is now utilizing the new Next.js **App Router**, which will become the default standard going forward.
+Should you be interested in a version that uses the legacy AppRouter, you can find it at the following repository: [starter-template-next-simple-blog-pagerouter](https://github.com/caisy-io/starter-template-next-simple-blog-pagerouter).
+Please note that it is compatible with this repository, and you can follow along the onboarding process just the same.
+
 Deploy this template to Vercel
 <br>
 <br>
@@ -90,6 +96,7 @@ In a nested route, the components of a segment will be nested inside the compone
 ![](https://nextjs.org/_next/image?url=%2Fdocs%2Fdark%2Fnested-file-conventions-component-hierarchy.png&w=1920&q=75&dpl=dpl_DjpzdahhLTquuaq7vugKKMQTDADC)
 
 See More About [NEXT.JS Using App Router](https://nextjs.org/docs/app)
+
 ## Next.js x Caisy
 
 ## 👀 Want to learn more?
