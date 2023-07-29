@@ -39,6 +39,8 @@ export const FullwidthBlogTeaser: React.FC<IGenFullwidthBlogTeaser> = ({
                               src={`${author.avatar?.src}?w=46&h=46`}
                               alt={author.avatar?.description ?? ""}
                               className="object-cover"
+                              width={"46px"}
+                              height={"46px"}
                             />
                           </div>
                         </div>
@@ -88,6 +90,8 @@ export const FullwidthBlogTeaser: React.FC<IGenFullwidthBlogTeaser> = ({
                   srcSet={`${imageSrc}?w=1920&h=1920 1920w, ${imageSrc}?w=960&h=960 1280w, ${imageSrc}?w=640&h=640 640w, ${imageSrc}?w=320&h=320 320w`}
                   alt={imageDescription ?? ""}
                   className="object-cover"
+                  width={"960px"}
+                  height={"960px"}
                 />
               </div>
             </div>

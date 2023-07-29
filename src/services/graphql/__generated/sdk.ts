@@ -1079,7 +1079,7 @@ export type IGenPageFragment = { __typename?: 'Page', id?: string | null, slug?:
   ) | (
     { __typename: 'NewsletterSignup' }
     & IGenNewsletterSignupFragment
-  ) | null> | null, seo?: { __typename?: 'SeoInformation', title?: string | null, keywords?: string | null, id?: string | null, description?: string | null, ogImage?: { __typename?: 'Asset', id?: string | null } | null } | null };
+  ) | null> | null, seo?: { __typename?: 'SeoInformation', title?: string | null, keywords?: string | null, id?: string | null, description?: string | null, ogImage?: { __typename?: 'Asset', id?: string | null, src?: string | null, description?: string | null } | null } | null };
 
 export type IGenFooterQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -1297,6 +1297,8 @@ export const PageFragmentDoc = gql`
     title
     ogImage {
       id
+      src
+      description
     }
     keywords
     id

@@ -1,94 +1,48 @@
+import { Maybe } from "graphql/jsutils/Maybe";
 import { IGenSeoInformation } from "../graphql/__generated/sdk";
+import { Metadata } from "next";
 
-export const getHeadProps = (seo?: IGenSeoInformation | null) => {
-  const head: any = {
-    meta: [
-      {
-        name: "og:locale",
-        content: "en_US",
-      },
-      {
-        name: "og:type",
-        content: "website",
-      },
-      {
-        name: "twitter:card",
-        content: "summary_large_image",
-      },
-    ],
-  };
-
-  if (!seo) return head;
-
+export const getMetadataProps = (seo: Maybe<IGenSeoInformation>): Metadata => {
   const ogImageSrc = seo?.ogImage?.src;
   const ogImageAlt = seo?.ogImage?.description;
+  const metadata: Metadata = {
+    openGraph: {
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+    },
+  };
+  if (!seo) return metadata;
+  if (metadata.openGraph && metadata.twitter) {
+    if (seo.title) {
+      metadata["title"] = seo.title;
+      metadata.openGraph["title"] = seo.title;
+      metadata.twitter["title"] = seo.title;
+    }
 
-  if (seo.title) {
-    head.title = seo.title;
-    head.meta.push({
-      name: "og:title",
-      content: seo.title,
-    });
-    head.meta.push({
-      name: "twitter:title",
-      content: seo.title,
-    });
-  }
-  if (seo.description) {
-    head.meta.push({
-      name: "description",
-      content: seo.description,
-    });
-    head.meta.push({
-      name: "og:description",
-      content: seo.description,
-    });
-    head.meta.push({
-      name: "twitter:description",
-      content: seo.description,
-    });
-  }
-  if (ogImageSrc) {
-    head.meta.push({
-      name: "og:image",
-      content: ogImageSrc,
-    });
-    head.meta.push({
-      name: "twitter:image",
-      content: ogImageSrc,
-    });
-    head.meta.push({
-      name: "og:image:type",
-      content: "image/jpeg",
-    });
-    head.meta.push({
-      name: "og:image:width",
-      content: "1200",
-    });
-    head.meta.push({
-      name: "og:image:height",
-      content: "630",
-    });
-    head.meta.push({
-      name: "og:image",
-      content: `${ogImageSrc}?f=jpeg&w=1200&h=630`,
-    });
-    head.meta.push({
-      name: "og:image:secure_url",
-      content: `${ogImageSrc}?f=jpeg&w=1200&h=630`,
-    });
-    head.meta.push({
-      name: "twitter:image",
-      content: `${ogImageSrc}?f=jpeg&w=1200&h=630`,
-    });
-  }
+    if (seo.description) {
+      metadata["description"] = seo.description;
+      metadata.openGraph["description"] = seo.description;
+      metadata.twitter["description"] = seo.description;
+    }
 
-  if (ogImageAlt) {
-    head.meta.push({
-      name: "og:image:alt",
-      content: ogImageAlt,
-    });
-  }
+    if (ogImageSrc) {
+      metadata.openGraph["images"] = {
+        type: "image/jpeg",
+        url: ogImageSrc,
+        width: 1200,
+        height: 630,
+        secureUrl: `${ogImageSrc}?f=jpeg&w=1200&h=630`,
+      };
 
-  return head;
+      metadata.twitter["images"] = ogImageSrc;
+    }
+
+    if (ogImageAlt && metadata.openGraph["images"]) {
+      metadata.openGraph["images"]["alt"] = ogImageAlt;
+    }
+  }
+  return metadata;
 };

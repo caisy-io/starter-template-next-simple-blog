@@ -29,6 +29,8 @@ export const f_Page = gql`
       title
       ogImage {
         id
+        src
+        description
       }
       keywords
       id
