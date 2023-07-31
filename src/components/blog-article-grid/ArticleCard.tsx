@@ -31,11 +31,14 @@ export const ArticleCard: React.FC<IGenBlogArticle> = ({
         </div>
       </div>
       <div>
-        <a href={`/blog/${slug}`} className="pointer">
+        <a href={`/blog/${slug}`} className="pointer" title="Visit blog">
           <div className="flex justify-start items-start">
             <div className="flex justify-center items-center relative overflow-hidden gap-2 rounded-md bg-white">
-              <p className="text-[15px] font-semibold text-center text-blue-600">
-                Read more
+              <p
+                className="text-[15px] font-semibold text-center text-blue-600"
+                title="Visit blog"
+              >
+                Visit Blog
               </p>
               <svg
                 width="14"

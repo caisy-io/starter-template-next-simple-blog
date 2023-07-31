@@ -29,5 +29,5 @@ export async function generateStaticParams() {
   const resAllArticles = await getAllBlogArticles({});
   return resAllArticles?.map((page) => ({ slug: page.slug }));
 }
-export const fetchCache = "default";
 export const revalidate = 1;
+export const fetchCache = "default-cache";

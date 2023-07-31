@@ -13,6 +13,7 @@ export const getMetadataProps = (seo: Maybe<IGenSeoInformation>): Metadata => {
     twitter: {
       card: "summary_large_image",
     },
+    // robots: { index: true, googleBot: { index: true } },
   };
   if (!seo) return metadata;
   if (metadata.openGraph && metadata.twitter) {

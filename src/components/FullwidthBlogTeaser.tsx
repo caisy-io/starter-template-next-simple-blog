@@ -61,6 +61,18 @@ export const FullwidthBlogTeaser: React.FC<IGenFullwidthBlogTeaser> = ({
                     <div className="flex justify-center items-center relative overflow-hidden gap-2 rounded-md bg-white">
                       <p className=" text-[15px] font-semibold text-center text-blue-600">
                         Read more
+                        <span
+                          className="screen-reader-text"
+                          style={{
+                            position: "absolute",
+                            width: "1px",
+                            height: "1px",
+                            overflow: "hidden",
+                          }}
+                        >
+                          {" "}
+                          details about this blog
+                        </span>
                       </p>
                       <svg
                         width="14"

@@ -43,5 +43,5 @@ export async function generateStaticParams() {
     ?.filter((page) => page.slug && page.slug !== "404")
     .map((page) => ({ slug: page.slug! }));
 }
-export const fetchCache = "default";
 export const revalidate = 1;
+export const fetchCache = "default-cache";
