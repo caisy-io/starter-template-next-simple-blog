@@ -4,22 +4,20 @@ export async function GET(req: Request) {
     req.headers.get("host") || req.headers.get("x-forwarded-host")
   }`;
 
-  const robots = `# *
-    User-agent: *
-    Allow: /
+  const robots = `
+# *
+User-agent: *
+Allow: /
     
-    # Host
-    Host: ${baseUrl}
+# Host
+Host: ${baseUrl}
     
-    # Sitemaps
-    Sitemap: ${baseUrl}/sitemap.xml
-    `;
+# Sitemaps
+Sitemap: ${baseUrl}/sitemap.xml
+`;
 
   headers.set("Content-Type", "text/plain");
   headers.set("Cache-Control", `max-age=${60 * 60 * 1}`); // 1 hour cache
-
-  console.log({ headers });
-
   return new Response(robots, {
     status: 200,
     headers,
