@@ -1,6 +1,4 @@
-import { NextResponse } from "next/server";
-
-export const GET = (req: Request) => {
+export async function GET(req: Request) {
   const headers = new Headers(req.headers);
   const baseUrl = `https://${
     req.headers.get("host") || req.headers.get("x-forwarded-host")
@@ -20,8 +18,10 @@ export const GET = (req: Request) => {
   headers.set("Content-Type", "text/plain");
   headers.set("Cache-Control", `max-age=${60 * 60 * 1}`); // 1 hour cache
 
+  console.log({ headers });
+
   return new Response(robots, {
     status: 200,
     headers,
   });
-};
+}
