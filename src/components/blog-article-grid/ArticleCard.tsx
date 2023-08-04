@@ -1,5 +1,6 @@
 import React from "react";
 import { IGenBlogArticle } from "../../services/graphql/__generated/sdk";
+import Link from "next/link";
 
 export const ArticleCard: React.FC<IGenBlogArticle> = ({
   teaserImage,
@@ -31,7 +32,7 @@ export const ArticleCard: React.FC<IGenBlogArticle> = ({
         </div>
       </div>
       <div>
-        <a href={`/blog/${slug}`} className="pointer" title="Visit blog">
+        <Link href={`/blog/${slug}`} className="pointer" title="Visit blog">
           <div className="flex justify-start items-start">
             <div className="flex justify-center items-center relative overflow-hidden gap-2 rounded-md bg-white">
               <p
@@ -58,7 +59,7 @@ export const ArticleCard: React.FC<IGenBlogArticle> = ({
               </svg>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { IGenFullwidthBlogTeaser } from "../services/graphql/__generated/sdk";
 import { FullContainer } from "./FullContainer";
+import Link from "next/link";
 
 export const FullwidthBlogTeaser: React.FC<IGenFullwidthBlogTeaser> = ({
   featuredArticle,
@@ -56,7 +57,10 @@ export const FullwidthBlogTeaser: React.FC<IGenFullwidthBlogTeaser> = ({
                     </div>
                   </div>
                 )}
-                <a href={`/blog/${featuredArticle?.slug}`} className="pointer">
+                <Link
+                  href={`/blog/${featuredArticle?.slug}`}
+                  className="pointer"
+                >
                   <div className="flex justify-start items-start ">
                     <div className="flex justify-center items-center relative overflow-hidden gap-2 rounded-md bg-white">
                       <p className=" text-[15px] font-semibold text-center text-blue-600">
@@ -92,7 +96,7 @@ export const FullwidthBlogTeaser: React.FC<IGenFullwidthBlogTeaser> = ({
                       </svg>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
               <div className="flex-grow w-full md:w-1/2 relative overflow-hidden rounded-lg">
                 <img
