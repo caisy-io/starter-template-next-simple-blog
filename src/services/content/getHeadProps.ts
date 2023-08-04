@@ -2,10 +2,17 @@ import { Maybe } from "graphql/jsutils/Maybe";
 import { IGenSeoInformation } from "../graphql/__generated/sdk";
 import { Metadata } from "next";
 
+const publicURL = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:3000";
+
 export const getMetadataProps = (seo: Maybe<IGenSeoInformation>): Metadata => {
   const ogImageSrc = seo?.ogImage?.src;
   const ogImageAlt = seo?.ogImage?.description;
   const metadata: Metadata = {
+    metadataBase: new URL(publicURL),
     openGraph: {
       locale: "en_US",
       type: "website",
