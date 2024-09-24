@@ -714,6 +714,9 @@ type CaisyDocument_Meta {
   createdAt: DateTime
 
   """"""
+  firstPublishedAt: DateTime
+
+  """"""
   id: ID
 
   """"""
@@ -1823,6 +1826,9 @@ type Query {
   Tag(id: ID!): Caisy_Field_Tag
 
   """"""
+  TeaserGrid(id: ID!, locale: String): TeaserGrid
+
+  """"""
   allAsset(after: String, before: String, first: Int, last: Int, locale: String, sort: [Asset_Sort], where: [Asset_Where]): Asset_Connection
 
   """"""
@@ -1863,6 +1869,9 @@ type Query {
 
   """"""
   allTags(after: String, before: String, first: Int, last: Int): Tag_Connection
+
+  """"""
+  allTeaserGrid(after: String, before: String, first: Int, last: Int, locale: String, sort: [TeaserGrid_Sort], where: [TeaserGrid_Where]): TeaserGrid_Connection
 }
 
 """"""
@@ -2027,4 +2036,67 @@ type Tag_ConnectionEdge {
 
   """"""
   node: Caisy_Field_Tag
+}
+
+""""""
+type TeaserGrid {
+  """"""
+  _meta: CaisyDocument_Meta
+
+  """"""
+  headline: String
+
+  """"""
+  id: ID
+}
+
+""""""
+type TeaserGrid_Connection {
+  """"""
+  edges: [TeaserGrid_ConnectionEdge]
+
+  """"""
+  pageInfo: PageInfo
+
+  """"""
+  totalCount: Int
+}
+
+""""""
+type TeaserGrid_ConnectionEdge {
+  """"""
+  cursor: String
+
+  """"""
+  node: TeaserGrid
+}
+
+""""""
+input TeaserGrid_Sort {
+  """"""
+  createdAt: Order
+
+  """"""
+  headline: Order
+
+  """"""
+  id: Order
+
+  """"""
+  publishedAt: Order
+
+  """"""
+  updatedAt: Order
+}
+
+""""""
+input TeaserGrid_Where {
+  """"""
+  AND: [TeaserGrid_Where]
+
+  """"""
+  OR: [TeaserGrid_Where]
+
+  """"""
+  headline: CaisyField_String_Where
 }

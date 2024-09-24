@@ -373,6 +373,7 @@ export type IGenBlogArticle_Text_Connections = IGenAsset;
 export type IGenCaisyDocument_Meta = {
   __typename?: 'CaisyDocument_Meta';
   createdAt?: Maybe<Scalars['DateTime']>;
+  firstPublishedAt?: Maybe<Scalars['DateTime']>;
   id?: Maybe<Scalars['ID']>;
   locale?: Maybe<Scalars['String']>;
   locales?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -952,6 +953,7 @@ export type IGenQuery = {
   Page?: Maybe<IGenPage>;
   SeoInformation?: Maybe<IGenSeoInformation>;
   Tag?: Maybe<IGenCaisy_Field_Tag>;
+  TeaserGrid?: Maybe<IGenTeaserGrid>;
   allAsset?: Maybe<IGenAsset_Connection>;
   allAuthor?: Maybe<IGenAuthor_Connection>;
   allBlogArticle?: Maybe<IGenBlogArticle_Connection>;
@@ -966,6 +968,7 @@ export type IGenQuery = {
   allPage?: Maybe<IGenPage_Connection>;
   allSeoInformation?: Maybe<IGenSeoInformation_Connection>;
   allTags?: Maybe<IGenTag_Connection>;
+  allTeaserGrid?: Maybe<IGenTeaserGrid_Connection>;
 };
 
 
@@ -1059,6 +1062,12 @@ export type IGenQuerySeoInformationArgs = {
 
 export type IGenQueryTagArgs = {
   id: Scalars['ID'];
+};
+
+
+export type IGenQueryTeaserGridArgs = {
+  id: Scalars['ID'];
+  locale?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -1212,6 +1221,17 @@ export type IGenQueryAllTagsArgs = {
   last?: InputMaybe<Scalars['Int']>;
 };
 
+
+export type IGenQueryAllTeaserGridArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
+  locale?: InputMaybe<Scalars['String']>;
+  sort?: InputMaybe<Array<InputMaybe<IGenTeaserGrid_Sort>>>;
+  where?: InputMaybe<Array<InputMaybe<IGenTeaserGrid_Where>>>;
+};
+
 export type IGenSeoInformation = {
   __typename?: 'SeoInformation';
   _meta?: Maybe<IGenCaisyDocument_Meta>;
@@ -1293,6 +1313,40 @@ export type IGenTag_ConnectionEdge = {
   __typename?: 'Tag_ConnectionEdge';
   cursor?: Maybe<Scalars['String']>;
   node?: Maybe<IGenCaisy_Field_Tag>;
+};
+
+export type IGenTeaserGrid = {
+  __typename?: 'TeaserGrid';
+  _meta?: Maybe<IGenCaisyDocument_Meta>;
+  headline?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['ID']>;
+};
+
+export type IGenTeaserGrid_Connection = {
+  __typename?: 'TeaserGrid_Connection';
+  edges?: Maybe<Array<Maybe<IGenTeaserGrid_ConnectionEdge>>>;
+  pageInfo?: Maybe<IGenPageInfo>;
+  totalCount?: Maybe<Scalars['Int']>;
+};
+
+export type IGenTeaserGrid_ConnectionEdge = {
+  __typename?: 'TeaserGrid_ConnectionEdge';
+  cursor?: Maybe<Scalars['String']>;
+  node?: Maybe<IGenTeaserGrid>;
+};
+
+export type IGenTeaserGrid_Sort = {
+  createdAt?: InputMaybe<IGenOrder>;
+  headline?: InputMaybe<IGenOrder>;
+  id?: InputMaybe<IGenOrder>;
+  publishedAt?: InputMaybe<IGenOrder>;
+  updatedAt?: InputMaybe<IGenOrder>;
+};
+
+export type IGenTeaserGrid_Where = {
+  AND?: InputMaybe<Array<InputMaybe<IGenTeaserGrid_Where>>>;
+  OR?: InputMaybe<Array<InputMaybe<IGenTeaserGrid_Where>>>;
+  headline?: InputMaybe<IGenCaisyField_String_Where>;
 };
 
 export type IGenAssetFragment = { __typename?: 'Asset', title?: string | null, src?: string | null, originType?: string | null, keywords?: string | null, id?: string | null, dominantColor?: string | null, description?: string | null, copyright?: string | null, author?: string | null };

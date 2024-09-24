@@ -10,6 +10,7 @@
         "kind": "OBJECT",
         "name": "Asset",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -189,6 +190,7 @@
         "kind": "OBJECT",
         "name": "Asset_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -240,6 +242,7 @@
         "kind": "OBJECT",
         "name": "Asset_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -275,6 +278,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Asset_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -450,6 +454,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Asset_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -641,6 +646,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Asset_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -816,6 +822,7 @@
         "kind": "OBJECT",
         "name": "Author",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -924,6 +931,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Author_Avatar_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -947,6 +955,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Author_Avatar_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -970,6 +979,7 @@
         "kind": "OBJECT",
         "name": "Author_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -1021,6 +1031,7 @@
         "kind": "OBJECT",
         "name": "Author_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -1056,6 +1067,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Author_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -1123,6 +1135,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Author_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -1218,6 +1231,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Author_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -1297,6 +1311,7 @@
         "kind": "OBJECT",
         "name": "BlogArticle",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -1589,6 +1604,7 @@
         "kind": "OBJECT",
         "name": "BlogArticleGrid",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -1713,6 +1729,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticleGrid_Articles_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -1736,6 +1753,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticleGrid_Articles_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -1759,6 +1777,7 @@
         "kind": "OBJECT",
         "name": "BlogArticleGrid_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -1810,6 +1829,7 @@
         "kind": "OBJECT",
         "name": "BlogArticleGrid_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -1845,6 +1865,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticleGrid_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -1924,6 +1945,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticleGrid_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2031,6 +2053,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticleGrid_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2122,6 +2145,7 @@
         "kind": "UNION",
         "name": "BlogArticleGrid_articles",
         "description": "",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -2138,6 +2162,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Author_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2161,6 +2186,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Author_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2184,6 +2210,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Category_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2207,6 +2234,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Category_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2230,6 +2258,7 @@
         "kind": "OBJECT",
         "name": "BlogArticle_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -2281,6 +2310,7 @@
         "kind": "OBJECT",
         "name": "BlogArticle_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -2316,6 +2346,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2407,6 +2438,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Seo_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2430,6 +2462,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Seo_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2453,6 +2486,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2596,6 +2630,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_TeaserImage_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2619,6 +2654,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_TeaserImage_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2642,6 +2678,7 @@
         "kind": "INPUT_OBJECT",
         "name": "BlogArticle_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -2781,6 +2818,7 @@
         "kind": "OBJECT",
         "name": "BlogArticle_text",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "connections",
@@ -2857,6 +2895,7 @@
         "kind": "UNION",
         "name": "BlogArticle_text_Connections",
         "description": "",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -2873,6 +2912,7 @@
         "kind": "SCALAR",
         "name": "Boolean",
         "description": "The `Boolean` scalar type represents `true` or `false`.",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -2883,9 +2923,22 @@
         "kind": "OBJECT",
         "name": "CaisyDocument_Meta",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "createdAt",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "DateTime",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "firstPublishedAt",
             "description": "",
             "args": [],
             "type": {
@@ -2970,6 +3023,7 @@
         "kind": "INPUT_OBJECT",
         "name": "CaisyField_Color_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3017,6 +3071,7 @@
         "kind": "INPUT_OBJECT",
         "name": "CaisyField_Number_WhereInt",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3100,6 +3155,7 @@
         "kind": "INPUT_OBJECT",
         "name": "CaisyField_Richtext_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3147,6 +3203,7 @@
         "kind": "INPUT_OBJECT",
         "name": "CaisyField_String_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3194,6 +3251,7 @@
         "kind": "OBJECT",
         "name": "Caisy_Field_Document_NotFound",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "id",
@@ -3229,6 +3287,7 @@
         "kind": "OBJECT",
         "name": "Caisy_Field_Tag",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "color",
@@ -3276,6 +3335,7 @@
         "kind": "OBJECT",
         "name": "Category",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -3323,6 +3383,7 @@
         "kind": "OBJECT",
         "name": "Category_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -3374,6 +3435,7 @@
         "kind": "OBJECT",
         "name": "Category_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -3409,6 +3471,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Category_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3464,6 +3527,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Category_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3535,6 +3599,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Category_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3590,6 +3655,7 @@
         "kind": "OBJECT",
         "name": "ContactForm",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -3649,6 +3715,7 @@
         "kind": "OBJECT",
         "name": "ContactForm_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -3700,6 +3767,7 @@
         "kind": "OBJECT",
         "name": "ContactForm_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -3735,6 +3803,7 @@
         "kind": "INPUT_OBJECT",
         "name": "ContactForm_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3802,6 +3871,7 @@
         "kind": "INPUT_OBJECT",
         "name": "ContactForm_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3885,6 +3955,7 @@
         "kind": "INPUT_OBJECT",
         "name": "ContactForm_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -3952,6 +4023,7 @@
         "kind": "SCALAR",
         "name": "DateTime",
         "description": "The `DateTime` scalar type represents a DateTime. The DateTime is serialized as an RFC 3339 quoted string",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -3962,6 +4034,7 @@
         "kind": "OBJECT",
         "name": "Footer",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -4034,6 +4107,7 @@
         "kind": "OBJECT",
         "name": "Footer_content",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "connections",
@@ -4110,6 +4184,7 @@
         "kind": "UNION",
         "name": "Footer_content_Connections",
         "description": "",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -4126,6 +4201,7 @@
         "kind": "OBJECT",
         "name": "Fulltext",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -4198,6 +4274,7 @@
         "kind": "OBJECT",
         "name": "Fulltext_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -4249,6 +4326,7 @@
         "kind": "OBJECT",
         "name": "Fulltext_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -4284,6 +4362,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Fulltext_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -4351,6 +4430,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Fulltext_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -4422,6 +4502,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Fulltext_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -4489,6 +4570,7 @@
         "kind": "OBJECT",
         "name": "Fulltext_text",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "connections",
@@ -4565,6 +4647,7 @@
         "kind": "UNION",
         "name": "Fulltext_text_Connections",
         "description": "",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -4581,6 +4664,7 @@
         "kind": "OBJECT",
         "name": "FullwidthBlogTeaser",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -4677,6 +4761,7 @@
         "kind": "OBJECT",
         "name": "FullwidthBlogTeaser_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -4728,6 +4813,7 @@
         "kind": "OBJECT",
         "name": "FullwidthBlogTeaser_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -4763,6 +4849,7 @@
         "kind": "INPUT_OBJECT",
         "name": "FullwidthBlogTeaser_FeaturedArticle_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -4786,6 +4873,7 @@
         "kind": "INPUT_OBJECT",
         "name": "FullwidthBlogTeaser_FeaturedArticle_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -4809,6 +4897,7 @@
         "kind": "INPUT_OBJECT",
         "name": "FullwidthBlogTeaser_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -4864,6 +4953,7 @@
         "kind": "INPUT_OBJECT",
         "name": "FullwidthBlogTeaser_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -4947,6 +5037,7 @@
         "kind": "INPUT_OBJECT",
         "name": "FullwidthBlogTeaser_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -5014,6 +5105,7 @@
         "kind": "OBJECT",
         "name": "Headline",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -5085,6 +5177,7 @@
         "kind": "OBJECT",
         "name": "Headline_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -5136,6 +5229,7 @@
         "kind": "OBJECT",
         "name": "Headline_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -5171,6 +5265,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Headline_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -5250,6 +5345,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Headline_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -5345,6 +5441,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Headline_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -5424,6 +5521,7 @@
         "kind": "SCALAR",
         "name": "ID",
         "description": "The `ID` scalar type represents a unique identifier, often used to refetch an object or as key for a cache. The ID type appears in a JSON response as a String; however, it is not intended to be human-readable. When expected as an input type, any string (such as `\"4\"`) or integer (such as `4`) input value will be accepted as an ID.",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -5434,6 +5532,7 @@
         "kind": "SCALAR",
         "name": "Int",
         "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -5444,6 +5543,7 @@
         "kind": "SCALAR",
         "name": "JSON",
         "description": "Any JSON value",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -5454,6 +5554,7 @@
         "kind": "OBJECT",
         "name": "Navigation",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -5652,6 +5753,7 @@
         "kind": "OBJECT",
         "name": "NavigationEntry",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -5748,6 +5850,7 @@
         "kind": "OBJECT",
         "name": "NavigationEntry_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -5799,6 +5902,7 @@
         "kind": "OBJECT",
         "name": "NavigationEntry_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -5834,6 +5938,7 @@
         "kind": "INPUT_OBJECT",
         "name": "NavigationEntry_Connection_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -5857,6 +5962,7 @@
         "kind": "INPUT_OBJECT",
         "name": "NavigationEntry_Connection_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -5880,6 +5986,7 @@
         "kind": "INPUT_OBJECT",
         "name": "NavigationEntry_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -5963,6 +6070,7 @@
         "kind": "INPUT_OBJECT",
         "name": "NavigationEntry_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -6030,6 +6138,7 @@
         "kind": "UNION",
         "name": "Navigation_entries",
         "description": "",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -6046,6 +6155,7 @@
         "kind": "OBJECT",
         "name": "NewsletterSignup",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -6117,6 +6227,7 @@
         "kind": "OBJECT",
         "name": "NewsletterSignup_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -6168,6 +6279,7 @@
         "kind": "OBJECT",
         "name": "NewsletterSignup_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -6203,6 +6315,7 @@
         "kind": "INPUT_OBJECT",
         "name": "NewsletterSignup_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -6282,6 +6395,7 @@
         "kind": "INPUT_OBJECT",
         "name": "NewsletterSignup_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -6377,6 +6491,7 @@
         "kind": "INPUT_OBJECT",
         "name": "NewsletterSignup_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -6456,6 +6571,7 @@
         "kind": "ENUM",
         "name": "Order",
         "description": "",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -6479,6 +6595,7 @@
         "kind": "OBJECT",
         "name": "Page",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -6640,6 +6757,7 @@
         "kind": "OBJECT",
         "name": "PageInfo",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "endCursor",
@@ -6699,6 +6817,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Page_Components_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -6722,6 +6841,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Page_Components_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -6805,6 +6925,7 @@
         "kind": "OBJECT",
         "name": "Page_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -6856,6 +6977,7 @@
         "kind": "OBJECT",
         "name": "Page_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -6891,6 +7013,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Page_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -6958,6 +7081,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Page_Seo_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -6981,6 +7105,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Page_Seo_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -7004,6 +7129,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Page_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -7111,6 +7237,7 @@
         "kind": "INPUT_OBJECT",
         "name": "Page_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -7202,6 +7329,7 @@
         "kind": "UNION",
         "name": "Page_components",
         "description": "",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -7243,6 +7371,7 @@
         "kind": "OBJECT",
         "name": "Query",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "Asset",
@@ -7851,6 +7980,47 @@
             "type": {
               "kind": "OBJECT",
               "name": "Caisy_Field_Tag",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "TeaserGrid",
+            "description": "",
+            "args": [
+              {
+                "name": "id",
+                "description": "",
+                "type": {
+                  "kind": "NON_NULL",
+                  "name": null,
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "ID",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "locale",
+                "description": "",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeaserGrid",
               "ofType": null
             },
             "isDeprecated": false,
@@ -9281,6 +9451,111 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "allTeaserGrid",
+            "description": "",
+            "args": [
+              {
+                "name": "after",
+                "description": "",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "before",
+                "description": "",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "first",
+                "description": "",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "last",
+                "description": "",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Int",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "locale",
+                "description": "",
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "String",
+                  "ofType": null
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "sort",
+                "description": "",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "TeaserGrid_Sort",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              },
+              {
+                "name": "where",
+                "description": "",
+                "type": {
+                  "kind": "LIST",
+                  "name": null,
+                  "ofType": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "TeaserGrid_Where",
+                    "ofType": null
+                  }
+                },
+                "defaultValue": null,
+                "isDeprecated": false,
+                "deprecationReason": null
+              }
+            ],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeaserGrid_Connection",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -9292,6 +9567,7 @@
         "kind": "OBJECT",
         "name": "SeoInformation",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "_meta",
@@ -9424,6 +9700,7 @@
         "kind": "OBJECT",
         "name": "SeoInformation_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -9475,6 +9752,7 @@
         "kind": "OBJECT",
         "name": "SeoInformation_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -9510,6 +9788,7 @@
         "kind": "INPUT_OBJECT",
         "name": "SeoInformation_Nested_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -9601,6 +9880,7 @@
         "kind": "INPUT_OBJECT",
         "name": "SeoInformation_OgImage_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -9624,6 +9904,7 @@
         "kind": "INPUT_OBJECT",
         "name": "SeoInformation_OgImage_WhereConnection",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -9647,6 +9928,7 @@
         "kind": "INPUT_OBJECT",
         "name": "SeoInformation_Sort",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -9766,6 +10048,7 @@
         "kind": "INPUT_OBJECT",
         "name": "SeoInformation_Where",
         "description": "",
+        "isOneOf": false,
         "fields": null,
         "inputFields": [
           {
@@ -9869,6 +10152,7 @@
         "kind": "SCALAR",
         "name": "String",
         "description": "The `String` scalar type represents textual data, represented as UTF-8 character sequences. The String type is most often used by GraphQL to represent free-form human-readable text.",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -9879,6 +10163,7 @@
         "kind": "OBJECT",
         "name": "Tag_Connection",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "edges",
@@ -9930,6 +10215,7 @@
         "kind": "OBJECT",
         "name": "Tag_ConnectionEdge",
         "description": "",
+        "isOneOf": null,
         "fields": [
           {
             "name": "cursor",
@@ -9963,8 +10249,273 @@
       },
       {
         "kind": "OBJECT",
+        "name": "TeaserGrid",
+        "description": "",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "_meta",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "CaisyDocument_Meta",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "headline",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "id",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeaserGrid_Connection",
+        "description": "",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "edges",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "TeaserGrid_ConnectionEdge",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "pageInfo",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "PageInfo",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "totalCount",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "TeaserGrid_ConnectionEdge",
+        "description": "",
+        "isOneOf": null,
+        "fields": [
+          {
+            "name": "cursor",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "node",
+            "description": "",
+            "args": [],
+            "type": {
+              "kind": "OBJECT",
+              "name": "TeaserGrid",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "TeaserGrid_Sort",
+        "description": "",
+        "isOneOf": false,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "createdAt",
+            "description": "",
+            "type": {
+              "kind": "ENUM",
+              "name": "Order",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "headline",
+            "description": "",
+            "type": {
+              "kind": "ENUM",
+              "name": "Order",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "id",
+            "description": "",
+            "type": {
+              "kind": "ENUM",
+              "name": "Order",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "publishedAt",
+            "description": "",
+            "type": {
+              "kind": "ENUM",
+              "name": "Order",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "updatedAt",
+            "description": "",
+            "type": {
+              "kind": "ENUM",
+              "name": "Order",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "TeaserGrid_Where",
+        "description": "",
+        "isOneOf": false,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "AND",
+            "description": "",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "TeaserGrid_Where",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "OR",
+            "description": "",
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "INPUT_OBJECT",
+                "name": "TeaserGrid_Where",
+                "ofType": null
+              }
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "headline",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "CaisyField_String_Where",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
         "name": "__Directive",
         "description": "A Directive provides a way to describe alternate runtime execution and type validation behavior in a GraphQL document.\n\nIn some cases, you need to provide options to alter GraphQL's execution behavior in ways field arguments will not suffice, such as conditionally including or skipping a field. Directives provide this by describing additional information to the executor.",
+        "isOneOf": null,
         "fields": [
           {
             "name": "name",
@@ -10081,6 +10632,7 @@
         "kind": "ENUM",
         "name": "__DirectiveLocation",
         "description": "A Directive can be adjacent to many parts of the GraphQL language, a __DirectiveLocation describes one such possible adjacencies.",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -10206,6 +10758,7 @@
         "kind": "OBJECT",
         "name": "__EnumValue",
         "description": "One possible value for a given Enum. Enum values are unique values, not a placeholder for a string or numeric value. However an Enum value is returned in a JSON response as a string.",
+        "isOneOf": null,
         "fields": [
           {
             "name": "name",
@@ -10273,6 +10826,7 @@
         "kind": "OBJECT",
         "name": "__Field",
         "description": "Object and Interface types are described by a list of Fields, each of which has a name, potentially a list of arguments, and a return type.",
+        "isOneOf": null,
         "fields": [
           {
             "name": "name",
@@ -10393,6 +10947,7 @@
         "kind": "OBJECT",
         "name": "__InputValue",
         "description": "Arguments provided to Fields or Directives and the input fields of an InputObject are represented as Input Values which describe their type and optionally a default value.",
+        "isOneOf": null,
         "fields": [
           {
             "name": "name",
@@ -10488,6 +11043,7 @@
         "kind": "OBJECT",
         "name": "__Schema",
         "description": "A GraphQL Schema defines the capabilities of a GraphQL server. It exposes all available types and directives on the server, as well as the entry points for query, mutation, and subscription operations.",
+        "isOneOf": null,
         "fields": [
           {
             "name": "description",
@@ -10599,6 +11155,7 @@
         "kind": "OBJECT",
         "name": "__Type",
         "description": "The fundamental unit of any GraphQL Schema is the type. There are many kinds of types in GraphQL as represented by the `__TypeKind` enum.\n\nDepending on the kind of a type, certain fields describe information about that type. Scalar types provide no information beyond a name, description and optional `specifiedByURL`, while Enum types provide their values. Object and Interface types provide the fields they describe. Abstract types, Union and Interface, provide the Object types possible at runtime. List and NonNull types compose other types.",
+        "isOneOf": null,
         "fields": [
           {
             "name": "kind",
@@ -10802,6 +11359,18 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "isOneOf",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "SCALAR",
+              "name": "Boolean",
+              "ofType": null
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
           }
         ],
         "inputFields": null,
@@ -10813,6 +11382,7 @@
         "kind": "ENUM",
         "name": "__TypeKind",
         "description": "An enum describing what kind of type a given `__Type` is.",
+        "isOneOf": null,
         "fields": null,
         "inputFields": null,
         "interfaces": null,
